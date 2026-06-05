@@ -1,0 +1,503 @@
+/* 🌍 ESTILOS GENERALES */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #f5f5f5;
+  /* 🔧 espacio total dinámico: header + categorías */
+  padding-top: 140px; 
+  box-sizing: border-box;
+}
+
+/* ============================
+   Ajustes específicos para el logo
+   ============================ */
+.logo {
+  display: flex;
+  flex-direction: row;       /* logo y bloque de texto en fila */
+  align-items: center;       /* centrado vertical */
+  gap: 10px;                 /* espacio entre imagen y texto */
+}
+
+.logo-img {
+  height: 80px;              /* altura del logo */
+  width: auto;
+  max-width: 200px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;    /* título y subtítulo en columna */
+  line-height: 1.2;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #d4af37;            /* dorado */
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;               /* blanco para contraste */
+}
+
+/* 🔝 HEADER FIJO */
+.header {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  background-color: #111;
+  color: #d4af37;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  height: 100px;
+  gap: 30px; /* 🔧 espacio entre logo, buscador y nav */
+}
+
+/* 🔍 BUSCADOR */
+.buscador { 
+  text-align: center; 
+  min-width: 200px;
+  margin-left: 20px; /* 🔧 separa el buscador del logo */
+}
+.buscador input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #d4af37;
+  border-radius: 5px;
+  background-color: #000;
+  color: #f5f5f5;
+}
+
+
+/* 📂 CATEGORÍAS */
+.categorias {
+  position: fixed;
+  top: 100px;                 /* igual a la altura del header */
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  padding: 8px 0;
+  text-align: center;
+  border-top: 1px solid #d4af37;
+  border-bottom: 1px solid #d4af37;
+  z-index: 1500;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.categorias ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categorias ul li {
+  flex: 0 0 auto;
+}
+
+.categorias ul li a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.categorias ul li a:hover {
+  color: #fff;
+}
+
+/* Centrar títulos de categorías */
+#hierbas h3,
+#molidas h3,
+#mezclas h3,
+#dulces h3,
+#mas-vendidas h3 {
+  text-align: center;
+  color: #d4af37;
+  margin: 20px 0;
+}
+
+/* 🔗 NAVEGACIÓN */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: bold;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+/* 📲 SUBMENÚ CONTACTO */
+.nav .contacto {
+  position: relative; /* necesario para que el submenu se posicione respecto a este */
+}
+
+.nav .submenu {
+  display: none;
+  position: absolute;
+  background: #000;
+  border: 1px solid #d4af37;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  min-width: 160px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.nav .submenu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav .submenu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.nav .submenu li a:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+
+
+
+/* 🎯 HERO */
+.hero { 
+  position: relative; 
+  text-align: center; 
+  padding: 60px 20px; 
+}
+.hero h2 { 
+  color: #d4af37; 
+  font-size: 2rem; 
+}
+.btn { 
+  background-color: #d4af37; 
+  color: #000; 
+  padding: 10px 20px; 
+  border: none; 
+  cursor: pointer; 
+  font-weight: bold; 
+  border-radius: 5px; 
+}
+.btn:hover { 
+  background-color: #b8860b; 
+}
+
+/* 🛍️ PRODUCTOS */
+.grid-productos { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+  gap: 15px; 
+  padding: 20px; 
+}
+.producto { 
+  background-color: #111; 
+  border: 1px solid #d4af37; 
+  padding: 10px; 
+  border-radius: 6px; 
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+.producto img { 
+  max-width: 100%; 
+  border-radius: 5px; 
+  margin-bottom: 6px; 
+}
+.producto h3 { 
+  color: #d4af37; 
+  margin: 4px 0; 
+  font-size: 0.95rem; 
+}
+.producto p { 
+  margin: 2px 0; 
+  font-size: 0.9rem; 
+}
+.producto input { 
+  width: 50px; 
+  padding: 4px; 
+  margin: 4px auto; 
+  text-align: center; 
+  border: 1px solid #d4af37; 
+  border-radius: 4px; 
+  background-color: #000; 
+  color: #f5f5f5; 
+  font-size: 0.85rem; 
+}
+.producto button { 
+  background-color: #d4af37; 
+  color: #000; 
+  padding: 6px 12px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-size: 0.85rem; 
+  margin-top: 4px; 
+}
+.producto button:hover { 
+  background-color: #b8860b; 
+}
+
+/* 🛍️ Título de productos */
+.titulo-productos {
+  text-align: center;
+  color: #d4af37;
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: bold;
+}
+/* 🛒 CARRITO */
+.carrito { 
+  padding: 40px 20px; 
+  text-align: center; 
+}
+.carrito h2, .carrito h3 { 
+  text-align: center; 
+  color: #d4af37; 
+  margin-bottom: 15px; 
+}
+#carrito-items { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+.item-carrito { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background: #111; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border: 1px solid #d4af37; 
+  border-radius: 5px; 
+  width: 80%; 
+}
+.item-carrito button { 
+  background-color: #d9534f; 
+  color: #fff; 
+  border: none; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+.item-carrito button:hover { 
+  background-color: #c9302c; 
+}
+.carrito .btn { 
+  margin-top: 20px; 
+  background-color: #d4af37; 
+  color: #111; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+.carrito .btn:hover { 
+  background-color: #b38e2f; 
+}
+
+/* 📋 MODAL */
+.modal { 
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.8); 
+}
+.modal-content { 
+  background-color: #000; 
+  color: #f5f5f5; 
+  margin: 5% auto; 
+  padding: 20px; 
+  border-radius: 8px; 
+  width: 90%; 
+  max-width: 400px; 
+  max-height: 80vh; 
+  overflow-y: auto; 
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2); 
+}
+
+/* 📋 FORMULARIO */
+form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+}
+.form-group { 
+  display: flex; 
+  flex-direction: column; 
+}
+.form-group label { 
+  color: #d4af37; 
+  font-weight: bold; 
+  margin-bottom: 5px; 
+}
+form input, form textarea { 
+  padding: 10px; 
+  border: 1px solid #d4af37; 
+  border-radius: 5px; 
+  background-color: #000; 
+  color: #f5f5f5; 
+}
+form textarea { 
+  resize: none; 
+  height: 80px; 
+}
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* ⚓ FOOTER */
+.footer {
+  background-color: #111;
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid #d4af37;
+  color: #ccc;
+  margin: 0;
+  border-radius: 0;
+}
+.footer p { 
+  margin: 5px 0; 
+  font-size: 0.85rem; 
+}
+/* 🎞️ SLIDER */
+.slider {
+  position: relative;
+  max-width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.slide { 
+  display: none; 
+  width: 100%; 
+  height: 100%; 
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide.active {
+  display: block;
+  animation: fade 1s;
+}
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Flechas */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  user-select: none;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+}
+.prev { left: 15px; }
+.next { right: 15px; }
+.prev:hover, .next:hover { background: rgba(0,0,0,0.7); }
+
+/* Puntos indicadores */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+.dots span {
+  cursor: pointer;
+  height: 12px; width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dots span.active { background-color: #d4af37; }
+
+/* Texto sobre el slider */
+.hero-text {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+.hero-text h2 {
+  color: #d4af37;
+  font-size: 2rem;
+}
+
+/* 📱 AJUSTES MÓVILES */
+@media (max-width: 768px) {
+  body { padding-top: 140px; } /* 🔧 ajusta espacio según header */
+  .header { 
+    grid-template-columns: 1fr; 
+    text-align: center; 
+    height: 120px;             /* header más alto en móviles */
+  }
+  .categorias { top: 120px; }  /* 🔧 baja igual que la altura del header */
+  .nav ul { justify-content: center; flex-wrap: wrap; }
+  .buscador { margin-top: 10px; }
+  .slider { height: 250px; }   /* reduce altura del carrusel en móviles */
+  .hero-text h2 { font-size: 1.5rem; }
+}

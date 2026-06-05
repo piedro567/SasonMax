@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SazonMax - Especias Premium</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- En tu <head> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- 🔝 HEADER -->
+ <header class="header">
+  <div class="logo">
+    <img src="img/s1.jpeg" alt="SazonMax Logo" class="logo-img">
+    <div class="logo-text">
+      <h1>SazonMax</h1>
+      <p>Especias Premium</p>
+    </div>
+  </div>
+
+  <!-- 🔍 BUSCADOR -->
+  <div class="buscador">
+    <input id="buscador" type="text" placeholder="Buscar productos...">
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="#productos"><i class="fa-solid fa-box"></i> Productos</a></li>
+      <li><a href="#carrito"><i class="fa-solid fa-cart-shopping"></i> Carrito (<span id="contador-carrito">0</span>)</a></li>
+      
+      <!-- 📲 CONTACTO con menú desplegable -->
+    <li class="contacto">
+  <a href="javascript:void(0)" id="btnContacto"><i class="fa-solid fa-address-book"></i> Contacto</a>
+  <ul id="menuContacto" class="submenu">
+    <li><a href="tel:56373393"><i class="fa-solid fa-phone"></i> Llamar</a></li>
+    <li><a href="https://wa.me/56373393" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+    <li><a href="sms:56373393"><i class="fa-solid fa-comment-dots"></i> SMS</a></li>
+  </ul>
+</li>
+
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- 📂 Categorías -->
+  <nav class="categorias">
+    <ul>
+      <li><a href="#hierbas">Hierbas Aromaticas</a></li>
+      <li><a href="#molidas">Especias Molidas</a></li>
+      <li><a href="#mezclas">Mezclas de especias</a></li>
+      <li><a href="#dulces">Especias Dulces</a></li>
+      <li><a href="#mas-vendidas">Más Vendidas</a></li>
+    </ul>
+  </nav>
+
+
+<!-- 🎯 HERO / SLIDER -->
+<section class="hero">
+  <div class="slider">
+    <div class="slide active"><img src="img/logo.png" alt="Sabor auténtico 1"></div>
+    <div class="slide"><img src="img/fondo2.webp" alt="Máximo Sabor 2"></div>
+    <div class="slide"><img src="img/fondo3.webp" alt="Sabor auténtico 3"></div>
+
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+    <div class="dots"></div>
+  </div>
+
+  <div class="hero-text">
+    <h2>Descubre el sabor auténtico</h2>
+  </div>
+</section>
+
+
+<!-- 🛍️ PRODUCTOS -->
+<section id="productos" class="productos">
+  <h2 class="titulo-productos">Nuestros Productos</h2>
+
+ <!-- 🌿 Hierbas aromáticas -->
+<section id="hierbas">
+  <h3>🌿 Hierbas aromáticas</h3>
+  <div class="grid-productos">
+
+    <article class="producto">
+      <img src="img/oregano.jpeg" alt="Orégano">
+      <h3>Orégano</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Orégano', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/laurel.jpeg" alt="Laurel">
+      <h3>Laurel</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Laurel', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/albahaca.jpg" alt="Albahaca">
+      <h3>Albahaca</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Albahaca', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/culantro.jpg" alt="Culantro">
+      <h3>Culantro</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Culantro', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/menta.jpg" alt="Menta">
+      <h3>Menta</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Menta', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/romero.jpg" alt="Romero">
+      <h3>Romero</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Romero', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/tomillo.jpg" alt="Tomillo">
+      <h3>Tomillo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Tomillo', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/salvia.jpg" alt="Salvia">
+      <h3>Salvia</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Salvia', this)">Agregar</button>
+    </article>
+
+  </div>
+</section>
+
+
+ <!-- 🌶️ Especias molidas y enteras -->
+<section id="molidas">
+  <h3>🌶️ Especias molidas y enteras</h3>
+  <div class="grid-productos">
+
+    <article class="producto">
+      <img src="img/pimienta.jpg" alt="Pimienta Negra">
+      <h3>Pimienta Negra</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Pimienta Negra', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/comino.jpeg" alt="Comino">
+      <h3>Comino</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Comino', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/ajo.jpeg" alt="Ajo en polvo">
+      <h3>Ajo en polvo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Ajo en polvo', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/cebollaenpolvo.jpeg" alt="Cebolla en polvo">
+      <h3>Cebolla en polvo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Cebolla en polvo', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/canela.jpg" alt="Canela en rama">
+      <h3>Canela en rama</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Canela en rama', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/nuez.jpg" alt="Nuez Moscada">
+      <h3>Nuez Moscada</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Nuez Moscada', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/clavo.jpg" alt="Clavo de olor">
+      <h3>Clavo de olor</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Clavo de olor', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/paprika.jpg" alt="Paprika">
+      <h3>Paprika</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Paprika', this)">Agregar</button>
+    </article>
+
+  </div>
+</section>
+
+
+  <!-- 🍛 Mezclas de especias -->
+<section id="mezclas">
+  <h3>🍛 Mezclas de especias</h3>
+  <div class="grid-productos">
+
+
+
+    <article class="producto">
+      <img src="img/cilantro y achiote.jpeg" alt="cilantro y achiote">
+      <h3>cilantro y achiote</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('cilantro y achiote', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/garam.jpg" alt="Garam Masala">
+      <h3>Garam Masala</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Garam Masala', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/curry.jpeg" alt="Curry en polvo">
+      <h3>Curry en polvo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Curry en polvo', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/adobo.jpeg" alt="Adobo criollo">
+      <h3>Adobo criollo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Adobo criollo', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/sazoncompleto.jpeg" alt="Sazón completo">
+      <h3>Sazón completo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Sazón completo', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/sofrito.jpg" alt="Mezcla para sofrito">
+      <h3>Mezcla para sofrito</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Mezcla para sofrito', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/barbacoacubana.jpeg" alt="Mezcla barbacoa cubana">
+      <h3>Mezcla barbacoa</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Mezcla barbacoa cubana', this)">Agregar</button>
+    </article>
+
+  </div>
+</section>
+
+
+  <!-- 🌸 Especias dulces y especiales -->
+<section id="dulces">
+  <h3>🌸 Especias dulces y especiales</h3>
+  <div class="grid-productos">
+
+    <article class="producto">
+      <img src="img/vainilla.jpg" alt="Vainilla">
+      <h3>Vainilla en polvo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Vainilla en polvo', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/canela.jpeg" alt="Canela">
+      <h3>Canela molida</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Canela molida', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/anís.jpg" alt="Anís estrellado">
+      <h3>Anís estrellado</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Anís estrellado', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/clavo.jpg" alt="Clavo de olor">
+      <h3>Clavo de olor</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Clavo de olor', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/nuez.jpg" alt="Nuez Moscada">
+      <h3>Nuez Moscada</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Nuez Moscada', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/cardamomo.jpg" alt="Cardamomo">
+      <h3>Cardamomo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Cardamomo', this)">Agregar</button>
+    </article>
+
+  </div>
+</section>
+
+
+  <!-- ⭐ Más vendidas -->
+<section id="mas-vendidas">
+  <h3>⭐ Más vendidas</h3>
+  <div class="grid-productos">
+
+     <article class="producto">
+      <img src="img/Tocino.jpeg" alt="Tocino">
+      <h3>Tocino</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Tocino', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/oregano.jpeg" alt="Orégano">
+      <h3>Orégano</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Orégano', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/comino.jpeg" alt="Comino">
+      <h3>Comino</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Comino', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/pimienta.jpg" alt="Pimienta Negra">
+      <h3>Pimienta Negra</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Pimienta Negra', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/adobo.jpeg" alt="Adobo criollo">
+      <h3>Adobo criollo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Adobo criollo', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/canela.jpeg" alt="Canela">
+      <h3>Canela molida</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Canela molida', this)">Agregar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/vainilla.jpg" alt="Vainilla">
+      <h3>Vainilla en polvo</h3>
+      <p>$200</p>
+      <input type="number" min="1" value="1" class="cantidad">
+      <button onclick="agregarProducto('Vainilla en polvo', this)">Agregar</button>
+    </article>
+
+  </div>
+</section>
+
+
+
+<!-- 🛒 CARRITO -->
+<section id="carrito" class="carrito">
+  <h2>🛒</h2>
+  <h2>Carrito de Compras</h2>
+  <div id="carrito-items"></div>
+  <h3 id="carrito-total">Total: $0</h3>
+  <button onclick="abrirFormulario()" class="btn">Finalizar Compra</button>
+</section>
+
+<!-- 📋 MODAL DE PEDIDO -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Datos del Pedido</h2>
+    <form id="pedidoForm">
+      <div class="form-group">
+        <label for="nombreCliente">Nombre*</label>
+        <input type="text" id="nombreCliente" required placeholder="Ejemplo: Juan Pérez">
+      </div>
+      <div class="form-group">
+        <label for="direccionCliente">Dirección*</label>
+        <input type="text" id="direccionCliente" required placeholder="Ejemplo: Calle 123 #45">
+      </div>
+      <div class="form-group">
+        <label for="telefonoCliente">Teléfono*</label>
+        <input type="text" id="telefonoCliente" required placeholder="Ejemplo: +53 56373393">
+      </div>
+      <div class="form-group fecha-wrapper">
+        <label for="fechaEntrega">Fecha de entrega*</label>
+        <div class="input-icon">
+          <input type="date" id="fechaEntrega" name="fechaEntrega" class="form-control" required>
+          <span class="calendar-icon" onclick="document.getElementById('fechaEntrega').showPicker()">📅</span>
+        </div>
+        <small>Seleccione una fecha entre mañana y los próximos 30 días.</small>
+      </div>
+      <div class="form-group">
+        <label for="descripcionCliente">Descripción (opcional)</label>
+        <textarea id="descripcionCliente" placeholder="Ejemplo: Entregar en portón azul"></textarea>
+      </div>
+      <div class="form-buttons">
+        <button type="button" onclick="enviarWhatsApp()" class="btn">Enviar por WhatsApp</button>
+        <button type="button" onclick="enviarSMS()" class="btn">Enviar por SMS</button>
+        <button type="button" onclick="cerrarFormulario()" class="btn btn-cancel">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ⚓ FOOTER -->
+<footer class="footer" id="contacto">
+  <p>📞 +53 5637 3393 | ✉️ info@sazonmax.com | 📍 La Habana, Cuba</p>
+  <p>© 2026 SazonMax - Todos los derechos reservados</p>
+</footer>
+
+<!-- 📜 SCRIPT PRINCIPAL -->
+<script src="script.js"></script>
+</body>
+</html>
